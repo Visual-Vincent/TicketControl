@@ -374,7 +374,7 @@ Public Class TicketItem
 
         Dim AcknowledgeDate As String = "Acknowledged: " & Me.Ticket.AcknowledgeDate.ToString("yyyy-MM-dd  HH:mm:ss")
         Dim AcknowledgeDateSize As SizeF = e.Graphics.MeasureString(AcknowledgeDate, Me.Font)
-        Dim AchnowledgeDateLocation As New PointF(RightCoordinate - 4.0F - AcknowledgeDateSize.Width, DrawPoint.Y + 4.0F)
+        Dim AcknowledgeDateLocation As New PointF(RightCoordinate - 4.0F - AcknowledgeDateSize.Width, DrawPoint.Y + 4.0F)
 
         Dim Sender As String = "Created by: " & Me.Ticket.Sender
         Dim SenderSize As SizeF = e.Graphics.MeasureString(Sender, Me.Font)
@@ -401,7 +401,7 @@ Public Class TicketItem
 
         'Top - Ticket ID and Acknowledge date.
         e.Graphics.DrawString(TicketID, Me.Font, Me.TextBrush, New PointF(LeftInnerCoordinate + 4.0F, DrawPoint.Y + 4.0F))
-        e.Graphics.DrawString(AcknowledgeDate, Me.Font, Me.TextBrush, AchnowledgeDateLocation)
+        e.Graphics.DrawString(AcknowledgeDate, Me.Font, Me.TextBrush, AcknowledgeDateLocation)
 
         'Bottom - Ticket status and Sender.
         e.Graphics.DrawString(Status, Me.Font, Me.TicketBrush, New PointF(LeftInnerCoordinate + 4.0F, BottomCoordinate - StatusSize.Height - 4.0F))
